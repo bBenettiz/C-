@@ -1,0 +1,42 @@
+@model IEnumerable<SP3064751MVCDB.Models.Editora>
+
+@{
+    ViewData["Title"] = "Editora";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Count() == 0)
+{
+    <p>Nenhuma editora cadastrada.</p>    
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>EditoraId</th>
+                <th>NomeFantasiaEditora</th>
+                <th>RazaoSocialEditora</th>
+                <th>EnderecoEditora</th>
+                <th>TelefoneEditora</th>
+                <th></th>
+            </tr>
+
+            <tbody>
+                @foreach(var editora in Model)
+                {
+                    <tr>
+                        <td>@editora.EditoraId</td>
+                        <td>@editora.NomeFantasiaEditora</td>
+                        <td>@editora.RazaoSocialEditora</td>
+                        <td>@editora.EnderecoEditora</td>
+                        <td>@editora.TelefoneEditora</td>
+                        <td>
+                            <a href="/Editora/Show/?EditoraId=@editora.EditoraId">Ver</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </thead>
+    </table>
+}

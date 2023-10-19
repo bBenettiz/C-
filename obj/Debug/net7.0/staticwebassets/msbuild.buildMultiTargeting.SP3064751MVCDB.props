@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SP3064751MVCDB.props" />
+</Project>

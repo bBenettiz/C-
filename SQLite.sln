@@ -1,0 +1,6 @@
+-- SQLite
+CREATE TABLE Livro (LivroId number, EditoraId number, CategoriaLivro varchar(30), PrecoLivro varchar(15), TituloLivro varchar(50), IsbnLivro varchar(30));
+
+CREATE TABLE Editora (EditoraId number, NomeFantasiaEditora varchar(70), RazaoSocialEditora varchar(75), EnderecoEditora varchar(100), TelefoneEditora varchar(15));
+
+
